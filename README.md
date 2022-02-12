@@ -15,8 +15,8 @@ Once you upload this file to your Arduino. Please run
 >> Terminal 3: rostopic echo /mpu6050 
 
 The euler angles provided by DMP library are fine but I have observed that after running the code for sometime the random values are being added to the euler angles and the data is not useful. You will convert the quaternions coming on the rostopic to the euler angles by the code provided in 
->> 
 
+...
 // I have used the Eigen Matrix library for this. The input to this function is a 4x1 quaternion vector in the order [q.w, q.x, q.y, q.z]
 
 Eigen::Vector3d quat2euler(const Eigen::Vector4d &q)
@@ -48,3 +48,4 @@ Eigen::Vector3d quat2euler(const Eigen::Vector4d &q)
 
   return eulers;
 }
+...
